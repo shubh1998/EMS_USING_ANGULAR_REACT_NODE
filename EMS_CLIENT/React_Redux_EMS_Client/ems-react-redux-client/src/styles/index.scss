@@ -1,0 +1,20 @@
+$theme-colors: (
+  "primary": #6200ea,
+  "success": #33691e,
+  "danger": #f50057,
+  "warning": #ffab00,
+);
+
+.ml-17 {
+  margin-left: 17%;
+}
+
+// Bootstrap and its default variables
+// @import "~bootstrap/scss/bootstrap";
+
+body {
+  margin: 0rem; // 5 rem  = 5*16
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium
+}
+

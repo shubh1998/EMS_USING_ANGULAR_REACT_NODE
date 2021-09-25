@@ -1,0 +1,26 @@
+#   users Table  #
+--------------------------------------
+id - { primary key }
+name
+email
+gender
+company_name
+department
+password
+address
+city
+state 
+country
+mobile
+profile_pic
+is_active - { true or false }
+user_type - { ADMIN or COMPANY or EMPLOYEE }
+timestamp - (created_at, updated_at)
+=================================================================
+
+#  auth‌_table  #
+---------------------------------------
+id - { primary key }
+user_id - { Foreign Key i.e. refert to the primary key of user table }
+auth_token
+timestamp - (created_at, updated_at)

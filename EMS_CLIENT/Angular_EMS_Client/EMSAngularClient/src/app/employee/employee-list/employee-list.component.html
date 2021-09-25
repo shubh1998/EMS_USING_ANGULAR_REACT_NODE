@@ -1,0 +1,40 @@
+<div>
+    <div class="row mt-1rem">
+        <div class="col-lg-6">
+            <button style="float: left;" pButton type="button" label="Add Employee" icon="pi pi-plus" class="p-button-lg p-button-success" [routerLink]="['/add-employee/']"></button>
+        </div>
+        <div class="col-lg-6">
+            <div style="float: right; display: flex;">
+                <b style="margin-top: 5px;">Filter By department:</b>
+                <select class="form-control" id="sel2" style="width: 180px; margin-left: 10px;" (change)="onSelectDepartment($event)">
+                    <option value="">Select department</option>
+                    <option *ngFor="let item of departments" value="{{item.department}}">{{item.department}}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="mt-1rem">
+        <p-table [value]="employees">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Company name</th>
+                    <th>Actions</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-employee>
+                <tr>
+                    <td>{{employee.name}}</td>
+                    <td>{{employee.email}}</td>
+                    <td>{{employee.company_name}}</td>
+                    <td>
+                        <a [routerLink]="['/view-employee/', employee.id]"><i class="fa fa-eye"></i></a>&nbsp;&nbsp;
+                        <a [routerLink]="['/edit-employee/', employee.id]"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
+                        <a><i class="fa fa-trash" (click)="deleteEmployee(employee.id)"></i></a>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>

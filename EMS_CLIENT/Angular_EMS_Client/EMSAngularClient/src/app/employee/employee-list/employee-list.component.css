@@ -1,0 +1,8 @@
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mt-1rem{
+    margin-top: 1rem;
+}

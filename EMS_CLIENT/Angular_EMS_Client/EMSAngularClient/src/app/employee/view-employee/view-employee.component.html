@@ -1,0 +1,24 @@
+<h3>Employee Details</h3>
+<div class="bg-grey">
+    <div class="row">
+        <div class="padding-container col-lg-8">
+            <p>Name: {{employeeDetail.name}}</p>
+            <p>Company name: {{employeeDetail.company_name}}</p>
+            <p>Department: {{employeeDetail.department}}</p>
+            <p>Email: {{employeeDetail.email}}</p>
+            <p>Gender: {{employeeDetail.gender}}</p>
+            <p>Mobile number: {{employeeDetail.mobile}}</p>
+            <p>Address: {{employeeDetail.address}}</p>
+            <p>City: {{employeeDetail.city}}</p>
+            <p>State: {{employeeDetail.state}}</p>
+            <p>Country: {{employeeDetail.country}}</p>
+        </div>
+        <div class="col-lg-4">
+            <img src="{{
+                    employeeDetail?.profile_pic
+                      ? employeeDetail?.profile_pic
+                      : 'https://picsum.photos/200'
+                  }}" style="border-radius: 50%; margin-top: 70px;"/>
+        </div>
+    </div>
+</div>

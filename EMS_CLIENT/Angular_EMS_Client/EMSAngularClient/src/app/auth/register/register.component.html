@@ -1,0 +1,102 @@
+<div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="text-center">Register your company</h3>
+        </div>
+    </div>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="form-group col-lg-6">
+                <label for="company_name">Company Name:</label>
+                <input type="company_name" class="form-control" id="company_name" formControlName="company_name">
+                <div *ngIf="(registerForm.controls.company_name.invalid && (registerForm.controls.company_name.dirty || registerForm.controls.company_name.touched))"
+                    class="error-msg">
+                    <small>
+                        *Company name is required !
+                    </small>
+                </div>
+            </div>
+            <div class="form-group col-lg-6">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" formControlName="email">
+                <div *ngIf="(registerForm.controls.email.invalid && (registerForm.controls.email.dirty || registerForm.controls.email.touched))"
+                    class="error-msg">
+                    <small *ngIf="registerForm.controls.email.hasError('required')">
+                        *Email is required !
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-lg-6">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" formControlName="password">
+                <div *ngIf="(registerForm.controls.password.invalid && (registerForm.controls.password.dirty || registerForm.controls.password.touched))"
+                    class="error-msg">
+                    <small>
+                        *Password is required !
+                    </small>
+                </div>
+            </div>
+            <div class="form-group col-lg-6">
+                <label for="mobile">Mobile Number:</label>
+                <input type="mobile" class="form-control" id="mobile" formControlName="mobile">
+                <div *ngIf="(registerForm.controls.mobile.invalid && (registerForm.controls.mobile.dirty || registerForm.controls.mobile.touched))"
+                    class="error-msg">
+                    <small>
+                        *Mobile number is required !
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-lg-6">
+                <label for="address">Address:</label>
+                <input type="address" class="form-control" id="address" formControlName="address">
+                <div *ngIf="(registerForm.controls.address.invalid && (registerForm.controls.address.dirty || registerForm.controls.address.touched))"
+                    class="error-msg">
+                    <small>
+                        *Address is required !
+                    </small>
+                </div>
+            </div>
+            <div class="form-group col-lg-6">
+                <label for="city">City:</label>
+                <input type="city" class="form-control" id="city" formControlName="city">
+                <div *ngIf="(registerForm.controls.city.invalid && (registerForm.controls.city.dirty || registerForm.controls.city.touched))"
+                    class="error-msg">
+                    <small>
+                        *City is required !
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-lg-6">
+                <label for="state">State:</label>
+                <input type="state" class="form-control" id="state" formControlName="state">
+                <div *ngIf="(registerForm.controls.state.invalid && (registerForm.controls.state.dirty || registerForm.controls.state.touched))"
+                    class="error-msg">
+                    <small>
+                        *State is required !
+                    </small>
+                </div>
+            </div>
+            <div class="form-group col-lg-6">
+                <label for="country">Country:</label>
+                <input type="country" class="form-control" id="country" formControlName="country">
+                <div *ngIf="(registerForm.controls.country.invalid && (registerForm.controls.country.dirty || registerForm.controls.country.touched))"
+                    class="error-msg">
+                    <small>
+                        *Country is required !
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Register</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: white;
+}
+
+th{
+    font-size: 16px;
+}
+
+td{
+    font-size: 14px;
+}
+
+i, a{
+    cursor: pointer;
+}
+
+.error-msg{
+    color: rgb(255, 0, 0);
+}

@@ -1,0 +1,10 @@
+.bg-grey{
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.padding-container{
+    text-align: center;
+    padding: 20px 0px;
+}
