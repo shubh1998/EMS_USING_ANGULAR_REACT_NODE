@@ -282,6 +282,7 @@ const deleteUser = async (req, res) => {
 };
 
 const getAllEmployees = async (req, res) => {
+  console.log(req.user.user_id);
   const allUsers = await User.query()
     .select(
       "id",
